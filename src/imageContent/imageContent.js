@@ -5,7 +5,7 @@ import Media from './../media/media';
 import Paragraph from './../paragraph/paragraph';
 
 const positionElement = (position, textSize, color, size, hasRadius) => (
-  <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'center' }}>
+  <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'flex-start' }}>
     <Media color={color} size={size} hasRadius={hasRadius} />
   </View>
 );
@@ -38,7 +38,7 @@ function ImageContent({
   firstLineWidth,
 }) {
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={{ flexDirection: 'row', flex: 1 }}>
       {position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius)}
       <View style={{ flex: 1 }}>
         <Paragraph
